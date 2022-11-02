@@ -1,5 +1,5 @@
 name: qr_reader
-description: QR Reader Sample
+description: QR and Barcode Reader Sample
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.

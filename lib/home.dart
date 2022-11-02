@@ -31,7 +31,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('QR Reader Sample'),
+        title: const Text('QR and Barcode Reader Sample'),
       ),
       body: SizedBox.expand(
         child: Column(
@@ -46,14 +46,15 @@ class _HomeState extends State<Home> {
               child: QRView(
                 key: _qrKey,
                 onQRViewCreated: (controller) {
-                  setState(() {
-                    this.controller = controller;
-                  });
+                  print('QR View Created');
+
+                  this.controller = controller;
                   controller.scannedDataStream.listen((event) {
                     setState(() {
                       result = event;
 
-                      print(result);
+                      print(result?.code);
+                      print(result?.format);
                     });
                   });
                 },

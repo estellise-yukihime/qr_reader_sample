@@ -1,5 +1,5 @@
-# QR Reader
+# QR and Barcode
 
-Sample QR Reader
+Sample QR and Barcode Reader
 
 ## -
